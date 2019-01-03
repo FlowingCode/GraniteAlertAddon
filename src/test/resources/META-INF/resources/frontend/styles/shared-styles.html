@@ -1,0 +1,76 @@
+<!--
+  #%L
+  Granite Alert
+  %%
+  Copyright (C) 2018 - 2019 Flowing Code
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+
+<custom-style>
+    <!-- This is where your App's styling should go. You can use .css files too. -->
+    <style>
+        granite-alert-mixin vaadin-button {
+			background-color: transparent;
+			cursor: pointer;
+        	position: absolute;
+        	right: 0;
+        	height: 26px;
+        	margin: 0;
+        	padding: 0;
+        }
+        
+        granite-alert-mixin[level="success"] vaadin-button {
+        	color: #3c763d;
+        }
+        
+        granite-alert-mixin[level="info"] vaadin-button {
+        	color: #31708f;
+        }
+        
+        granite-alert-mixin[level="warning"] vaadin-button {
+			color: #8a6d3b;
+        }
+        
+        granite-alert-mixin[level="danger"] vaadin-button {
+			color: #a94442;
+        }
+        
+        granite-alert-mixin.funny vaadin-button {
+			color: #ffff00;
+        }
+    </style>
+</custom-style>
+
+<dom-module id="custom-granite-alert-theme" theme-for="granite-alert">
+  <template>
+    <style>
+		:host(.boring) .alert {
+			color: var(--lumo-body-text-color);
+			background-color: white;
+			border-color: grey;
+		}
+		
+		:host(.funny) .alert {
+			background: purple; 
+	    	background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
+	    	background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+	    	background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+	    	background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+	    	color: black;
+	    	border: none;
+	    }
+    </style>
+  </template>
+</dom-module>
