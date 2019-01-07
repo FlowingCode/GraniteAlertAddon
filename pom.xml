@@ -17,6 +17,13 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     
+	<scm>
+        <url>https://github.com/FlowingCode/GraniteAlertAddon</url>
+        <connection>scm:git:git://github.com/FlowingCode/GraniteAlertAddon.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:/FlowingCode/GraniteAlertAddon.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+	
     <organization>
        <name>Flowing Code</name>
        <url>https://www.flowingcode.com</url>
