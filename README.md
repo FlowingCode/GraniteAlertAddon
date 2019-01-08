@@ -36,6 +36,33 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 ## License & Author
 
-Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
+GraniteAlertAddon is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-GraniteAlert is written by Flowing Code S.A.
+GraniteAlertAddon is written by Flowing Code S.A.
+
+# Developer Guide
+
+GraniteAlert is a container for other components, which are rendered inside the alert.
+The property `level` maps to the `level` attribute of granite-alert, with each level (info, warning, error and success) providing a different style. The property `compact` enables additional style rules that reduce spacing around the content.
+
+```
+GraniteAlert alert = new GraniteAlert();
+alert.setCompact(true);
+alert.setLevel(GraniteAlertLevel.SUCCESS);
+alert.add(new Span("Success!"));
+```
+
+It is also posible to injecting styles directly into the granite-alert shadow DOM, by using style modules:
+```
+<dom-module id="custom-granite-alert-theme" theme-for="granite-alert">
+  <template>
+    <style>
+        :host(.custom) .alert {
+            color: var(--lumo-body-text-color);
+            background-color: white;
+            border-color: grey;
+        }
+    </style>
+  </template>
+</dom-module>
+```
