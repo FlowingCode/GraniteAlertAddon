@@ -4,7 +4,7 @@
 
     <groupId>com.flowingcode.addons</groupId>
     <artifactId>granite-alert</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Granite Alert</name>
     <description>Integration of granite-alert for Vaadin 10</description>
     
@@ -20,7 +20,7 @@
         <url>https://github.com/FlowingCode/GraniteAlertAddon</url>
         <connection>scm:git:git://github.com/FlowingCode/GraniteAlertAddon.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/FlowingCode/GraniteAlertAddon.git</developerConnection>
-        <tag>granite-alert-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 	
     <organization>
