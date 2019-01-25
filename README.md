@@ -1,8 +1,9 @@
+[![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/granite-alert)
 [![Build Status](https://jenkins.flowingcode.com/job/GraniteAlert-addon/badge/icon)](https://jenkins.flowingcode.com/job/GraniteAlert-addon)
 
 # Granite Alert
 
-Vaadin 10 wrapper for https://github.com/LostInBrittany/granite-alert with [themable](https://github.com/vaadin/vaadin-themable-mixin) support.
+Vaadin 10 global notifications (wrapper for https://github.com/LostInBrittany/granite-alert with [themable](https://github.com/vaadin/vaadin-themable-mixin) support.)
 
 ## Online demo
 
