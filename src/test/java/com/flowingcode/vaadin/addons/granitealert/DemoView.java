@@ -1,5 +1,3 @@
-package com.flowingcode.vaadin.addons.granitealert;
-
 /*-
  * #%L
  * Granite Alert
@@ -19,6 +17,8 @@ package com.flowingcode.vaadin.addons.granitealert;
  * limitations under the License.
  * #L%
  */
+package com.flowingcode.vaadin.addons.granitealert;
+
 
 import com.flowingcode.vaadin.addons.granitealert.GraniteAlert.GraniteAlertLevel;
 import com.vaadin.flow.component.button.Button;
