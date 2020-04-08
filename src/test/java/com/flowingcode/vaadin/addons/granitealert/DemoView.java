@@ -2,7 +2,7 @@
  * #%L
  * Granite Alert
  * %%
- * Copyright (C) 2018 - 2019 Flowing Code
+ * Copyright (C) 2018 - 2020 Flowing Code
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,9 @@ package com.flowingcode.vaadin.addons.granitealert;
 
 import com.flowingcode.vaadin.addons.granitealert.GraniteAlert.GraniteAlertLevel;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -36,7 +38,8 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @Route("")
 @Theme(Lumo.class)
 @BodySize(height = "100vh", width = "100vw")
-@HtmlImport("styles/shared-styles.html")
+@StyleSheet("styles/shared-styles.css")
+@CssImport(value = "custom-granite-styles.css", themeFor = "granite-alert-mixin")
 public class DemoView extends Div {
 	
 	Div container = new Div();

@@ -2,7 +2,7 @@
  * #%L
  * Granite Alert
  * %%
- * Copyright (C) 2018 - 2019 Flowing Code
+ * Copyright (C) 2018 - 2020 Flowing Code
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,13 +28,18 @@ import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.HasStyle;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.dependency.NpmPackage;
 
 /**Wrapper for {@code granite-alert} Polymer element
  * 
  * @author Javier Godoy / Flowing Code
  */
 @Tag("granite-alert-mixin")
-@HtmlImport("frontend://bower_components/granite-alert-mixin/granite-alert-mixin.html")
+//@NpmPackage(value = "@granite-elements/granite-alert", version = "^2.1.2")
+//@JsModule("@granite-elements/granite-alert/granite-alert.js")
+@JsModule("./granite-alert/granite-alert.js")
+@JsModule("./granite-alert-mixin/granite-alert-mixin.js")
 public class GraniteAlert extends Component implements HasComponents, HasStyle {
 
 	private static final long serialVersionUID = 1L;

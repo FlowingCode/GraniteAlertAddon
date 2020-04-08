@@ -1,4 +1,10 @@
-target
-.settings
-.project
-.classpath
+/target
+/.settings
+/.classpath
+/.project
+/node_modules
+/webpack.generated.js
+/node
+/package-lock.json
+/webpack.config.js
+/package.json
