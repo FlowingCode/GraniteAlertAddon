@@ -3,11 +3,11 @@
 
 # Granite Alert
 
-Vaadin 10 global notifications (wrapper for https://github.com/LostInBrittany/granite-alert with [themable](https://github.com/vaadin/vaadin-themable-mixin) support.)
+Vaadin 10+ global notifications (wrapper for https://github.com/LostInBrittany/granite-alert with [themable](https://github.com/vaadin/vaadin-themable-mixin) support.)
 
 ## Online demo
 
-[Online demo here](http://addonsv10.flowingcode.com/granite-alert)
+[Online demo here](http://addonsv14.flowingcode.com/granite-alert)
 
 ## Building and running demo
 
@@ -18,7 +18,8 @@ To see the demo, navigate to http://localhost:8080/
 
 ## Release notes
 
-- **Version 1.0.0** Initial Version
+- **Version 2.0.0** Initial Version for Vaadin 14
+- **Version 1.0.0** Initial Version for Vaadin 10
 
 ## Issue tracking
 
