@@ -23,7 +23,6 @@ package com.flowingcode.vaadin.addons.granitealert;
 import com.flowingcode.vaadin.addons.granitealert.GraniteAlert.GraniteAlertLevel;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
