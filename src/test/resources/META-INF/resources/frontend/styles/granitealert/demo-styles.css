@@ -19,12 +19,11 @@
  */
 granite-alert-mixin vaadin-button {
 	background-color: transparent;
+	float: right;
 	cursor: pointer;
-   	position: absolute;
-   	right: 0;
-   	height: 26px;
-   	margin: 0;
-   	padding: 0;
+    height: 26px;
+    margin: 0;
+    padding: 0;
 }
       
 granite-alert-mixin[level="success"] vaadin-button {
