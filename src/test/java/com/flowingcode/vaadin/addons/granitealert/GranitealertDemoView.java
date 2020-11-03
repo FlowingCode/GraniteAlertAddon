@@ -31,7 +31,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.Route;
 
 @SuppressWarnings("serial")
-@Route(value = "granitealert", layout = DemoLayout.class)
+@Route(value = "granite-alert", layout = DemoLayout.class)
 @StyleSheet("context://frontend/styles/granitealert/demo-styles.css")
 @CssImport(value = "./styles/granitealert/custom-granite-styles.css", themeFor = "granite-alert-mixin")
 public class GranitealertDemoView extends Div {
