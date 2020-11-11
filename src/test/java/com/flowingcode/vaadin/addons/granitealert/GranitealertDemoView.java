@@ -20,6 +20,7 @@
 package com.flowingcode.vaadin.addons.granitealert;
 
 import com.flowingcode.vaadin.addons.DemoLayout;
+import com.flowingcode.vaadin.addons.GithubLink;
 import com.flowingcode.vaadin.addons.demo.impl.TabbedDemoImpl;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.StyleSheet;
@@ -30,6 +31,7 @@ import com.vaadin.flow.router.Route;
 @Route(value = "granite-alert", layout = DemoLayout.class)
 @StyleSheet("context://frontend/styles/granitealert/demo-styles.css")
 @CssImport(value = "./styles/granitealert/custom-granite-styles.css", themeFor = "granite-alert-mixin")
+@GithubLink("https://github.com/FlowingCode/GraniteAlertAddon")
 public class GranitealertDemoView extends VerticalLayout {
 
 	private static final String GRANITE_DEMO = "Granite Alert Demo";
