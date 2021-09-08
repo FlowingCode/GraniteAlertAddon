@@ -35,7 +35,7 @@ import com.vaadin.flow.router.Route;
 public class GranitealertDemoView extends TabbedDemo {
 
 	private static final String GRANITE_DEMO = "Granite Alert Demo";
-	private static final String GRANITE_SOURCE = "https://github.com/FlowingCode/GraniteAlertAddon/tree/master/src/test/java/com/flowingcode/vaadin/addons/granitealert/GranitealertDemo.java";
+	private static final String GRANITE_SOURCE = "https://raw.githubusercontent.com/FlowingCode/GraniteAlertAddon/master/src/test/java/com/flowingcode/vaadin/addons/granitealert/GranitealertDemo.java";
 
 	public GranitealertDemoView() {
 		addDemo(new GranitealertDemo(), GRANITE_DEMO, GRANITE_SOURCE);
