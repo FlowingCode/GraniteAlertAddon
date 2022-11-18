@@ -24,21 +24,19 @@ import com.flowingcode.vaadin.addons.GithubLink;
 import com.flowingcode.vaadin.addons.demo.TabbedDemo;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.StyleSheet;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.ParentLayout;
 import com.vaadin.flow.router.Route;
 
 @SuppressWarnings("serial")
-@Route(value = "granite-alert", layout = DemoLayout.class)
+@ParentLayout(DemoLayout.class)
+@Route("granite-alert")
 @StyleSheet("context://frontend/styles/granitealert/demo-styles.css")
 @CssImport(value = "./styles/granitealert/custom-granite-styles.css", themeFor = "granite-alert-mixin")
 @GithubLink("https://github.com/FlowingCode/GraniteAlertAddon")
 public class GranitealertDemoView extends TabbedDemo {
-
-	private static final String GRANITE_DEMO = "Granite Alert Demo";
-	private static final String GRANITE_SOURCE = "https://raw.githubusercontent.com/FlowingCode/GraniteAlertAddon/master/src/test/java/com/flowingcode/vaadin/addons/granitealert/GranitealertDemo.java";
-
+  
 	public GranitealertDemoView() {
-		addDemo(new GranitealertDemo(), GRANITE_DEMO, GRANITE_SOURCE);
+		addDemo(GranitealertDemo.class);
 		setSizeFull();
 	}
 }
