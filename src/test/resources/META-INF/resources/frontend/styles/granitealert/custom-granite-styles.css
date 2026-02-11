@@ -2,7 +2,7 @@
  * #%L
  * Granite Alert
  * %%
- * Copyright (C) 2018 - 2020 Flowing Code
+ * Copyright (C) 2018 - 2026 Flowing Code
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,13 +17,13 @@
  * limitations under the License.
  * #L%
  */
-:host(.boring) .alert {
+granite-alert-mixin.boring::part(alert) {
 	color: var(--lumo-body-text-color);
 	background-color: white;
 	border-color: grey;
 }
 
-:host(.funny) .alert {
+granite-alert-mixin.funny::part(alert) {
 	background: purple; 
    	background: -webkit-linear-gradient(left, orange, yellow, green, cyan, blue, violet);
    	background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
@@ -31,4 +31,4 @@
    	background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
    	color: black;
    	border: none;
-   }
+}

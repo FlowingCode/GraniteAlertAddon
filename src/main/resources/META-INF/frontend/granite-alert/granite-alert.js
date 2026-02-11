@@ -2,7 +2,7 @@
  * #%L
  * Granite Alert
  * %%
- * Copyright (C) 2018 - 2020 Flowing Code
+ * Copyright (C) 2018 - 2026 Flowing Code
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,7 +72,7 @@ class GraniteAlert extends PolymerElement {
           border-color: #ebccd1;
        }
       </style>
-      <div class$="alert {{level}} {{_hidden}}">
+      <div class$="alert {{level}} {{_hidden}}" part="alert">
         <slot></slot>
       </div>
     `;}

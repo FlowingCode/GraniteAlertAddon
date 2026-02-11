@@ -2,7 +2,7 @@
  * #%L
  * Granite Alert
  * %%
- * Copyright (C) 2018 - 2020 Flowing Code
+ * Copyright (C) 2018 - 2026 Flowing Code
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import com.vaadin.flow.router.Route;
 @DemoSource
 @Route(value = "granite-alert/granite-alert", layout = GranitealertDemoView.class)
 @StyleSheet("context://frontend/styles/granitealert/demo-styles.css")
-@CssImport(value = "./styles/granitealert/custom-granite-styles.css", themeFor = "granite-alert-mixin")
+@CssImport(value = "./styles/granitealert/custom-granite-styles.css")
 public class GranitealertDemo extends Div {
 
 	private Div container = new Div();
