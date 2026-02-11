@@ -23,15 +23,13 @@ import com.flowingcode.vaadin.addons.DemoLayout;
 import com.flowingcode.vaadin.addons.GithubLink;
 import com.flowingcode.vaadin.addons.demo.TabbedDemo;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.router.ParentLayout;
 import com.vaadin.flow.router.Route;
 
 @SuppressWarnings("serial")
 @ParentLayout(DemoLayout.class)
 @Route("granite-alert")
-@StyleSheet("context://frontend/styles/granitealert/demo-styles.css")
-@CssImport(value = "./styles/granitealert/custom-granite-styles.css")
+@CssImport(value = "./styles/granitealert/demo-styles.css")
 @GithubLink("https://github.com/FlowingCode/GraniteAlertAddon")
 public class GranitealertDemoView extends TabbedDemo {
   
