@@ -23,7 +23,6 @@ import com.flowingcode.vaadin.addons.demo.DemoSource;
 import com.flowingcode.vaadin.addons.granitealert.GraniteAlert.GraniteAlertLevel;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -34,9 +33,9 @@ import com.vaadin.flow.router.Route;
 @SuppressWarnings("serial")
 @PageTitle("Granite Alert Demo")
 @DemoSource
+@DemoSource(value = "/src/test/resources/META-INF/resources/frontend/styles/granitealert/demo-styles.css")
 @Route(value = "granite-alert/granite-alert", layout = GranitealertDemoView.class)
-@StyleSheet("context://frontend/styles/granitealert/demo-styles.css")
-@CssImport(value = "./styles/granitealert/custom-granite-styles.css")
+@CssImport("./styles/granitealert/demo-styles.css")
 public class GranitealertDemo extends Div {
 
 	private Div container = new Div();
