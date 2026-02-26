@@ -391,6 +391,13 @@
 				<jetty.version>11.0.26</jetty.version>
 				<flowingcode.commons.demo.version>5.2.0</flowingcode.commons.demo.version>
 			</properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-dev</artifactId>
+                    <optional>true</optional>
+                </dependency>
+            </dependencies>
 		</profile>
 		
     </profiles>
