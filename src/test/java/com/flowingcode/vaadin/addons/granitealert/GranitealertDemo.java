@@ -33,7 +33,7 @@ import com.vaadin.flow.router.Route;
 @SuppressWarnings("serial")
 @PageTitle("Granite Alert Demo")
 @DemoSource
-@DemoSource(value = "/src/test/resources/META-INF/resources/frontend/styles/granitealert/demo-styles.css")
+@DemoSource(value = "/src/test/resources/META-INF/frontend/styles/granitealert/demo-styles.css")
 @Route(value = "granite-alert/granite-alert", layout = GranitealertDemoView.class)
 @CssImport("./styles/granitealert/demo-styles.css")
 public class GranitealertDemo extends Div {
