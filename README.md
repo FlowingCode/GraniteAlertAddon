@@ -1,14 +1,53 @@
 [![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/granite-alert)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/granite-alert.svg)](https://vaadin.com/directory/component/granite-alert)
 [![Build Status](https://jenkins.flowingcode.com/job/GraniteAlert-14-addon/badge/icon)](https://jenkins.flowingcode.com/job/GraniteAlert-14-addon)
+[![Vaadin Directory](https://img.shields.io/vaadin-directory/v/granite-alert)](https://vaadin.com/directory/component/granite-alert)
 [![Javadoc](https://img.shields.io/badge/javadoc-00b4f0)](https://javadoc.flowingcode.com/artifact/com.flowingcode.addons/granite-alert)
 
 # Granite Alert
 
 Vaadin 10+ global notifications (wrapper for https://github.com/LostInBrittany/granite-alert with [themable](https://github.com/vaadin/vaadin-themable-mixin) support.)
 
+## Features
+
+* Alert container that renders any components inside it
+* Four levels, each one with a different style: info, warning, error and success
+* Compact mode that reduces the spacing around the content
+* Styling with CSS through the `alert` shadow part
+
+## Supported versions
+
+Supported versions: Vaadin 14-25 (add-on version 2.x)
+
 ## Online demo
 
-[Online demo here](http://addonsv14.flowingcode.com/granite-alert)
+[Online demo here](https://addonsv25.flowingcode.com/granite-alert)
+
+## Download release
+
+[Available in Vaadin Directory](https://vaadin.com/directory/component/granite-alert)
+
+### Maven install
+
+Add the following dependencies in your pom.xml file:
+
+```xml
+<dependency>
+   <groupId>com.flowingcode.addons</groupId>
+   <artifactId>granite-alert</artifactId>
+   <version>X.Y.Z</version>
+</dependency>
+```
+<!-- the above dependency should be updated with latest released version information -->
+
+```xml
+<repository>
+   <id>vaadin-addons</id>
+   <url>https://maven.vaadin.com/vaadin-addons</url>
+</repository>
+```
+
+For SNAPSHOT versions see [here](https://maven.flowingcode.com/snapshots/).
 
 ## Building and running demo
 
@@ -19,8 +58,7 @@ To see the demo, navigate to http://localhost:8080/
 
 ## Release notes
 
-- **Version 2.0.0** Initial Version for Vaadin 14
-- **Version 1.0.0** Initial Version for Vaadin 10
+See [here](https://github.com/FlowingCode/GraniteAlertAddon/releases)
 
 ## Issue tracking
 
@@ -64,27 +102,42 @@ GraniteAlertAddon is written by Flowing Code S.A.
 
 # Developer Guide
 
+## Getting started
+
 GraniteAlert is a container for other components, which are rendered inside the alert.
 The property `level` maps to the `level` attribute of granite-alert, with each level (info, warning, error and success) providing a different style. The property `compact` enables additional style rules that reduce spacing around the content.
 
-```
+```java
 GraniteAlert alert = new GraniteAlert();
 alert.setCompact(true);
 alert.setLevel(GraniteAlertLevel.SUCCESS);
 alert.add(new Span("Success!"));
 ```
 
-It is also posible to injecting styles directly into the granite-alert shadow DOM, by using style modules:
+## Styling
+
+The alert inside the granite-alert shadow DOM is exposed as the `alert` part, so it can be styled from a regular stylesheet:
+
+```java
+alert.addClassName("custom");
 ```
-<dom-module id="custom-granite-alert-theme" theme-for="granite-alert">
-  <template>
-    <style>
-        :host(.custom) .alert {
-            color: var(--lumo-body-text-color);
-            background-color: white;
-            border-color: grey;
-        }
-    </style>
-  </template>
-</dom-module>
+
+```css
+granite-alert-mixin.custom::part(alert) {
+    color: var(--lumo-body-text-color);
+    background-color: white;
+    border-color: grey;
+}
 ```
+
+## Special configuration when using Spring
+
+By default, Vaadin Flow only includes `com/vaadin/flow/component` to be always scanned for UI components and views. For this reason, the add-on might need to be allowed in order to display correctly. 
+
+To do so, just add `com.flowingcode` to the `vaadin.allowed-packages` property in `src/main/resources/application.properties`, like:
+
+```
+vaadin.allowed-packages = com.vaadin,org.vaadin,dev.hilla,com.flowingcode
+```
+ 
+More information on Spring scanning configuration [here](https://vaadin.com/docs/latest/integrations/spring/configuration/#configure-the-scanning-of-packages).
